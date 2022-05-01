@@ -2,10 +2,12 @@
 
 Interact with [Discord](https://discord.com/) from within [Cloudflare Workers](https://workers.cloudflare.com/).
 
+_This is the same as @glenstack/cf-workers-fetch-helpers, except it has the [Buffer bug](https://github.com/glenstack/glenstack/issues/13#issuecomment-1075535069) fixed_
+
 ## Installation
 
 ```sh
-npm install --save @glenstack/cf-workers-discord-bot
+npm install --save @code6226/cf-workers-discord-bot
 ```
 
 ## Usage
@@ -20,7 +22,7 @@ import {
   Interaction,
   InteractionResponse,
   InteractionResponseType,
-} from "@glenstack/cf-workers-discord-bot";
+} from "@code6226/cf-workers-discord-bot";
 
 const helloCommand: ApplicationCommand = {
   name: "hello",

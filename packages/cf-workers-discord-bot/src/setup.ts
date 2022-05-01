@@ -1,4 +1,4 @@
-import { authorization } from "@glenstack/cf-workers-fetch-helpers";
+import { authorization } from "@code6226/cf-workers-fetch-helpers";
 import { ApplicationCommand, InteractionHandler } from "./types";
 
 const TOKEN_URL = "https://discord.com/api/v6/oauth2/token";

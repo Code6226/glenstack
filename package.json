@@ -36,10 +36,5 @@
     "test": "lerna run test:ci",
     "build": "lerna run build",
     "clean": "lerna run clean"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint:fix && npm test"
-    }
   }
 }

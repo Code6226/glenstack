@@ -1,5 +1,5 @@
 {
-  "name": "@glenstack/cf-workers-discord-bot",
+  "name": "@code6226/cf-workers-discord-bot",
   "private": false,
   "description": "Interact with Discord from within a Cloudflare Worker",
   "version": "1.1.1",
@@ -44,7 +44,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@glenstack/cf-workers-fetch-helpers": "*",
+    "@code6226/cf-workers-fetch-helpers": "*",
     "@glenstack/cf-workers-router": "*",
     "tweetnacl": "1.0.3"
   }

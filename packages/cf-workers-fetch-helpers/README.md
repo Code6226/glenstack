@@ -2,6 +2,8 @@
 
 A collection of chainable helpers to adapt the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
 
+_This is the same as @glenstack/cf-workers-fetch-helpers, except it has the [Buffer bug](https://github.com/glenstack/glenstack/issues/13#issuecomment-1075535069) fixed_
+
 ### Installation
 
 ```sh
