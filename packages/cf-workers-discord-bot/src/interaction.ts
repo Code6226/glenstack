@@ -1,4 +1,4 @@
-import nacl from "tweetnacl";
+import { verifyKey } from "discord-interactions";
 import {
   ApplicationCommand,
   InteractionHandler,
@@ -19,11 +19,13 @@ const makeValidator = ({ publicKey }: { publicKey: string }) => async (
   const timestamp = String(request.headers.get("X-Signature-Timestamp"));
   const body = await request.text();
 
-  const isValid = nacl.sign.detached.verify(
-    Buffer.from(timestamp + body),
-    Buffer.from(signature, "hex"),
-    Buffer.from(publicKey, "hex")
-  );
+  // CF Workers don't have Node's Buffer
+  // const isValid = nacl.sign.detached.verify(
+  //   Buffer.from(timestamp + body),
+  //   Buffer.from(signature, "hex"),
+  //   Buffer.from(publicKey, "hex")
+  // );
+  const isValid = verifyKey(body, signature, timestamp, publicKey);
 
   if (!isValid) throw new Error("Invalid request");
 };
